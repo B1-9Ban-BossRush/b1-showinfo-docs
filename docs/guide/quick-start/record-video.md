@@ -21,17 +21,17 @@ OBS，全称 OBS Studio，是一款功能强大的开源软件，它使用户能
 
 点击[此链接](https://obsproject.com/download)进行官网下载页面，找到最新版本进行下载。推荐安装 Installer，全自动流程。
 
-![image-20250830111911403](https://image.davidingplus.cn/images/2025/08/30/image-20250830111911403.png)
+![image-20250830111911403](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830111911403.png)
 
 2. Steam 下载
 
 OBS 能在 Steam 商店中找到，直接下载即可。
 
-![image-20250830112049331](https://image.davidingplus.cn/images/2025/08/30/image-20250830112049331.png)
+![image-20250830112049331](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830112049331.png)
 
 注意，通过 Steam 下载的 OBS，当切换账号以后，需要关闭 OBS，重新打开才能正常使用。对于有直播需求并且需要频繁切号的朋友非常不方便。一个比较好的解决思路是进入 OBS 的安装目录，创建入口程序 `obs64.exe` 的快捷方式，后续直接通过快捷方式打开即可。这样就绕过了 Steam 的检测环节。
 
-![image-20250830112335953](https://image.davidingplus.cn/images/2025/08/30/image-20250830112335953.png)
+![image-20250830112335953](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830112335953.png)
 
 另外：
 
@@ -43,29 +43,29 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 在打开 OBS 之前，请先设置一下桌面的快捷方式的属性，右键快捷方式，选择属性，选择兼容性，勾选上以管理员模式启动。避免运行过程中 OBS 缺少管理员权限导致无法正常录制或直播。
 
-<center><img src="https://image.davidingplus.cn/images/2025/08/30/image-20250830123306001.png" alt="image-20250830123306001" style="zoom:55%;" /></center>
+<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123306001.png" alt="image-20250830123306001" style="zoom:55%;" /></center>
 
 打开 OBS 以后，你的界面大概是这样的：
 
-![image-20250830113501507](https://image.davidingplus.cn/images/2025/08/30/image-20250830113501507.png)
+![image-20250830113501507](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830113501507.png)
 
 下面的源默认是空的，我们需要在里面添加能捕捉到显示屏的内容。录制黑猴一般只用得到显示器采集和游戏采集。
 
-<center><img src="https://image.davidingplus.cn/images/2025/08/30/image-20250830113636306.png" alt="image-20250830113636306" style="zoom:40%;" /></center>
+<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830113636306.png" alt="image-20250830113636306" style="zoom:40%;" /></center>
 
 关于显示器采集，采集方式默认自动即可，显示器选择你自己的显示器就行，这样 OBS 就能正常抓取到你的屏幕了。
 
-![image-20250830123514878](https://image.davidingplus.cn/images/2025/08/30/image-20250830123514878.png)
+![image-20250830123514878](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123514878.png)
 
 关于游戏采集，模式可以选择采集全屏应用程序或者采集特定窗口。
 
 采集全屏应用程序，其他的默认即可。
 
-![image-20250830123934789](https://image.davidingplus.cn/images/2025/08/30/image-20250830123934789.png)
+![image-20250830123934789](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123934789.png)
 
 采集特定窗口，在窗口中选择黑猴的程序 `b1-Win64-Shipping.exe`，其他的依旧默认即可。
 
-![image-20250830124103529](https://image.davidingplus.cn/images/2025/08/30/image-20250830124103529.png)
+![image-20250830124103529](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124103529.png)
 
 ## 录制视频
 
@@ -73,21 +73,21 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 在视频栏，帧率建议选择 `59.94` 或者 `60`。
 
-![image-20250830124648702](https://image.davidingplus.cn/images/2025/08/30/image-20250830124648702.png)
+![image-20250830124648702](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124648702.png)
 
 在输出栏，输出模式建议选择高级，以下会给我我自己的直播和录制的设置。
 
 直播的设置如下，没有直播需求的朋友直接看录制设置即可。有直播需求的朋友可以结合我这个和网上其他大佬的设置综合调整。
 
-![image-20250830124912787](https://image.davidingplus.cn/images/2025/08/30/image-20250830124912787.png)
+![image-20250830124912787](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830124912787.png)
 
 录制的录制设置如下，注意修改录像路径到自己指定的位置，防止不知道什么时候 C 盘炸了。
 
-![image-20250830125031474](https://image.davidingplus.cn/images/2025/08/30/image-20250830125031474.png)
+![image-20250830125031474](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830125031474.png)
 
 录制的编码器设置如下，比特率控制建议选 CBR，比特率 8000 到 10000 即可。
 
-![image-20250830125146633](https://image.davidingplus.cn/images/2025/08/30/image-20250830125146633.png)
+![image-20250830125146633](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830125146633.png)
 
 这样设置好以后，就可以开始录制了。更进一步还可以设置快捷键方便开始录制和停止录制。
 
@@ -106,19 +106,19 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 下载好以后，首先解压 input-overlay-5.0.6-windows-x64.zip，得到的文件类似如下：
 
-![image-20250830131510053](https://image.davidingplus.cn/images/2025/08/30/image-20250830131510053.png)
+![image-20250830131510053](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131510053.png)
 
 将这些目录全部拷贝你自己的到 OBS 的安装根目录下，例如我的目录就是 `D:\Scoop\apps\obs-studio\current`，OBS 根目录类似如下：
 
-![image-20250830131618256](https://image.davidingplus.cn/images/2025/08/30/image-20250830131618256.png)
+![image-20250830131618256](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131618256.png)
 
 完事以后重新打开 OBS，在添加源里面就会发现多了一个**输入叠加**的选项。这个就是添加键鼠映射的入口。
 
-<center><img src="https://image.davidingplus.cn/images/2025/08/30/image-20250830131752608.png" alt="image-20250830131752608" style="zoom: 40%;" /></center>
+<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131752608.png" alt="image-20250830131752608" style="zoom: 40%;" /></center>
 
 以键盘映射为例，点击输入叠加，会让你选择贴图文件和配置文件。这些东西在上文提到的另一个文件 input-overlay-5.0.6-presets.zip 中，官方给了我们一些预设，直接拿来使用即可。将该文件解压出来以后，放到你自己找得到的位置（不一定是 OBS 的安装根目录）即可。
 
-![image-20250830131917080](https://image.davidingplus.cn/images/2025/08/30/image-20250830131917080.png)
+![image-20250830131917080](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131917080.png)
 
 由于规则要求键盘映射需要全尺寸键盘，因此键盘的贴图文件推荐使用 `qwertz_full_size_german`。以下以 input-overlay-5.0.6-presets 目录为基准，给出了贴图文件和配置文件的路径。
 
@@ -155,7 +155,7 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 https://ezgame.cc/tools/gamepadviewer.com/?p=1&s=0
 ```
 
-![image-20250830133003743](https://image.davidingplus.cn/images/2025/08/30/image-20250830133003743.png)
+![image-20250830133003743](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830133003743.png)
 
 ## 帧率显示
 
@@ -167,7 +167,7 @@ https://ezgame.cc/tools/gamepadviewer.com/?p=1&s=0
 
 最终录制出来的效果大致如下：
 
-![image-20250830133603428](https://image.davidingplus.cn/images/2025/08/30/image-20250830133603428.png)
+![image-20250830133603428](https://cdn.davidingplus.cn/images/2025/08/30/image-20250830133603428.png)
 
 （后面部分暂时没时间写，先这样吧，反正暂时不影响大家伙凹成绩。）
 
