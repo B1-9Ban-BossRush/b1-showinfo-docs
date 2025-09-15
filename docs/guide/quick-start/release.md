@@ -10,13 +10,19 @@
 
 ### v1.1-dev.x
 
-在 v1.0 版本基础上，增加了计时器的功能，可以看到截止目前和每个 BOSS 的用时，同时能看到 BOSS 的血量。
+在 v1.0 版本基础上，增加了如下功能：
+
+1. 增加了计时器，可以看到截止目前和每个 BOSS 的用时。
+2. 增加了 BOSS 的血量显示。
+3. 增加了击败每个 BOSS 的爆伤和截至目前的爆伤。
 
 下载链接如下：
 
+- [v1.1-dev.8](https://lzx0626.lanzouq.com/ilvNF368xjrc)：增加了击败每个 BOSS 的爆伤和截至目前的爆伤。
+
 - [v1.1-dev.7](https://lzx0626.lanzouq.com/iCVYt363uxzg)
 
-- [v1.1-dev.6](https://lzx0626.lanzouq.com/i2gux363uxwd)：修改计时器的 bug，加了 BOSS 的血量。
+- [v1.1-dev.6](https://lzx0626.lanzouq.com/i2gux363uxwd)：修改计时器的 bug，增加了 BOSS 的血量显示。
 
 - [v1.1-dev.5](https://lzx0626.lanzouq.com/i3ZcM35xl6wb)：修复重新挑战不清空计时历史的问题。
 
