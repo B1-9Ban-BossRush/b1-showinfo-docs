@@ -25,7 +25,7 @@ export default {
       vitepressUseRoute: useRoute,
       enable: true,
       model: {
-        url: 'https://raw.githubusercontent.com/iCharlesZ/vscode-live2d-models/master/model-library/wanko/wanko.model.json'
+        url: 'https://cdn.davidingplus.cn/files/vscode-live2d-model-library/wanko/wanko.model.json'
       },
       display: {
         position: 'right',
