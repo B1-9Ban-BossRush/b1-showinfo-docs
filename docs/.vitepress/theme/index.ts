@@ -2,7 +2,7 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { useWaline, useLive2d } from 'vitepress-waline-live2d'
+import { useWaline, useLive2d } from '@davidingplus/vitepress-waline-live2d'
 import { useRoute } from 'vitepress'
 import './style.css'
 
