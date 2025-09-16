@@ -21,7 +21,6 @@
     "@vueuse/core": "^13.9.0"
   },
   "devDependencies": {
-    "@waline/client": "^3.6.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "vitepress": "^2.0.0-alpha.6",
