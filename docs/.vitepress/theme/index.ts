@@ -6,6 +6,10 @@ import { useWaline, useLive2d } from '@davidingplus/vitepress-waline-live2d'
 import { useRoute } from 'vitepress'
 import './style.css'
 
+import BackToTopButton from '@miletorix/vitepress-back-to-top-button'
+import '@miletorix/vitepress-back-to-top-button/style.css'
+
+
 export default {
   extends: DefaultTheme,
   Layout: () => {
@@ -13,8 +17,8 @@ export default {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
-  enhanceApp({ app, router, siteData }) {
-    // ...
+  enhanceApp(ctx) {
+    BackToTopButton(ctx.app)
   },
   setup() {
     useWaline({

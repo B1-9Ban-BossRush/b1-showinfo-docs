@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@davidingplus/vitepress-waline-live2d": "^1.1.0",
+    "@miletorix/vitepress-back-to-top-button": "^1.0.1",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "vitepress": "^2.0.0-alpha.6",
