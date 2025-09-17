@@ -9,6 +9,9 @@ import './style.css'
 import BackToTopButton from '@davidingplus/vitepress-back-to-top-button'
 import '@davidingplus/vitepress-back-to-top-button/style.css'
 
+import ImageViewerP from '@davidingplus/vitepress-image-viewer'
+import '@davidingplus/vitepress-image-viewer/style.css'
+
 
 export default {
   extends: DefaultTheme,
@@ -19,6 +22,7 @@ export default {
   },
   enhanceApp(ctx) {
     BackToTopButton(ctx.app)
+    ImageViewerP(ctx.app)
   },
   setup() {
     useWaline({

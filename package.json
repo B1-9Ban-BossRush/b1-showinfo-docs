@@ -21,8 +21,9 @@
     "@vueuse/core": "^13.9.0"
   },
   "devDependencies": {
-    "@davidingplus/vitepress-waline-live2d": "^1.1.0",
     "@davidingplus/vitepress-back-to-top-button": "^1.0.2",
+    "@davidingplus/vitepress-image-viewer": "^1.1.5",
+    "@davidingplus/vitepress-waline-live2d": "^1.1.0",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "vitepress": "^2.0.0-alpha.6",
