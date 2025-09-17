@@ -6,8 +6,8 @@ import { useWaline, useLive2d } from '@davidingplus/vitepress-waline-live2d'
 import { useRoute } from 'vitepress'
 import './style.css'
 
-import BackToTopButton from '@miletorix/vitepress-back-to-top-button'
-import '@miletorix/vitepress-back-to-top-button/style.css'
+import BackToTopButton from '@davidingplus/vitepress-back-to-top-button'
+import '@davidingplus/vitepress-back-to-top-button/style.css'
 
 
 export default {
