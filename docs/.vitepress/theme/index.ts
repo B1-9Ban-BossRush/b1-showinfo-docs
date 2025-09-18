@@ -12,7 +12,6 @@ import '@davidingplus/vitepress-back-to-top-button/style.css'
 import ImageViewerP from '@davidingplus/vitepress-image-viewer'
 import '@davidingplus/vitepress-image-viewer/style.css'
 
-import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 
 
@@ -26,7 +25,6 @@ export default {
   enhanceApp(ctx) {
     BackToTopButton(ctx.app)
     ImageViewerP(ctx.app)
-    ctx.app.use(ElementPlus)
   },
   setup() {
     useWaline({
