@@ -24,6 +24,7 @@
     "@davidingplus/vitepress-back-to-top-button": "^1.0.2",
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
     "@davidingplus/vitepress-waline-live2d": "^1.1.0",
+    "element-plus": "^2.11.2",
     "gray-matter": "^4.0.3",
     "markdown-it": "^14.1.0",
     "vitepress": "^2.0.0-alpha.6",

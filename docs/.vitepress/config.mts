@@ -9,6 +9,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import llmstxt from 'vitepress-plugin-llms'
 
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "实时关键数据显示 MOD 手册",
