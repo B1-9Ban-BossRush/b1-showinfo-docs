@@ -17,7 +17,7 @@ function generateMarkdownFromJson(inputJsonPath, outputMdPath, headerText = '') 
         if (!table.data || table.data.length === 0) return []
 
         // 给每行加行号。
-        const numberedData = table.data.map((item, idx) => ({ 序号: idx + 1, ...item }))
+        const numberedData = table.data.map((item, idx) => ({ 排名: idx + 1, ...item }))
 
         // 表头和行数据。
         const headers = Object.keys(numberedData[0])
@@ -37,14 +37,16 @@ function generateMarkdownFromJson(inputJsonPath, outputMdPath, headerText = '') 
 }
 
 
-generateMarkdownFromJson(
-    'scripts/old-list.json',
-    'docs/guide/ranking-list/old-list.md',
-    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，原链接[见此](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。'
-)
+if (module === require.main) {
+    generateMarkdownFromJson(
+        'scripts/old-list.json',
+        'docs/guide/ranking-list/old-list.md',
+        '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。'
+    )
 
-generateMarkdownFromJson(
-    'scripts/new-list.json',
-    'docs/guide/ranking-list/new-list.md',
-    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，原链接[见此](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。'
-)
+    generateMarkdownFromJson(
+        'scripts/new-list.json',
+        'docs/guide/ranking-list/new-list.md',
+        '# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。'
+    )
+}

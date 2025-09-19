@@ -4,6 +4,7 @@ import { defineAdditionalConfig, type DefaultTheme } from 'vitepress'
 const require = createRequire(import.meta.url)
 const pkg = require('vitepress/package.json')
 
+
 export default defineAdditionalConfig({
     lang: 'zh-Hans',
     description: '黑神话悟空 实时关键数据显示 MOD 手册',
@@ -121,7 +122,8 @@ function guideSidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '简介', link: '/' },
-                { text: '更新日志', link: '/changelog' }]
+                { text: '更新日志', link: '/changelog' }
+            ]
         },
         {
             text: '快速上手',
