@@ -3,37 +3,44 @@ const json2md = require('json2md')
 
 
 /**
- * 转换 Table 表格数据。将 JSON 表格数据转换成 Markdown 格式的数据并写入到指定文件中。
- * @param {string} inputJsonPath - 原始 JSON 文件路径,
- * @param {string} outputMdPath - 输出的 Markdown 文件路径,
- * @param {string} headerText - 页面开头显示的标题和说明文字,
+ * 将 JSON 文件数据（包括表格和标题）转换成 Markdown 格式并写入到指定文件。
+ * @param {string} inputJsonPath - 原始 JSON 文件路径。
+ * @param {string} outputMdPath - 输出的 Markdown 文件路径。
+ * @param {string} pageHeader - 页面开头显示的标题和说明文字。
  */
-function generateMarkdownFromJson(inputJsonPath, outputMdPath, headerText = '') {
+function generateMarkdownFromJson(inputJsonPath, outputMdPath, pageHeader = '') {
     // 读取原始 JSON 文件。
-    const originJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
+    const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
     // 转换每张表。
-    const tableJson = originJson.flatMap(table => {
-        if (!table.data || table.data.length === 0) return []
+    const mdElements = rawJson.flatMap(section => {
+        if (!section.data || section.data.length === 0) return []
 
         // 给每行加行号。
-        const numberedData = table.data.map((item, idx) => ({ 排名: idx + 1, ...item }))
+        const tableRows = section.data.map((entry, index) => ({
+            排名: 1 + index,
+            ...entry
+        }))
 
-        // 表头和行数据。
-        const headers = Object.keys(numberedData[0])
-        const rows = numberedData.map(item => headers.map(h => item[h]))
+        // 获取列名（表头）。
+        const columnNames = Object.keys(tableRows[0])
+
+        // 每行的数据数组。
+        const tableContent = tableRows.map(row => columnNames.map(col => row[col]))
 
         return [
-            { h2: table.title },
-            { table: { headers, rows } }
+            // 表格标题。
+            { h2: section.title },
+            // 表格内容。         
+            { table: { headers: columnNames, rows: tableContent } }
         ]
     })
 
-    // 生成 Markdown。
-    const outputMd = `${headerText}\n\n` + json2md(tableJson)
+    // 生成 Markdown 文本。
+    const outputMdText = `${pageHeader}\n\n` + json2md(mdElements)
 
     // 写入文件。
-    fs.writeFileSync(outputMdPath, outputMd, 'utf-8')
+    fs.writeFileSync(outputMdPath, outputMdText, 'utf-8')
 }
 
 
