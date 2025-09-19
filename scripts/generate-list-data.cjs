@@ -107,15 +107,15 @@ function generateRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHe
 
 if (module === require.main) {
     generateRankingList(
-        'scripts/old-list-single.json',
-        'scripts/old-list-total.json',
+        'data/old-list-single.json',
+        'data/old-list-total.json',
         'docs/guide/ranking-list/old-list.md',
         '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n'
     )
 
     generateRankingList(
-        'scripts/new-list-single.json',
-        'scripts/new-list-total.json',
+        'data/new-list-single.json',
+        'data/new-list-total.json',
         'docs/guide/ranking-list/new-list.md',
         '# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n'
     )
