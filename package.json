@@ -13,9 +13,10 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
-    "preview": "vitepress preview docs"
+    "dev": "pnpm run generate-list && vitepress dev docs",
+    "build": "pnpm run generate-list && vitepress build docs",
+    "preview": "pnpm run build && vitepress preview docs",
+    "generate-list": "node scripts/generate-list-data.cjs"
   },
   "dependencies": {
     "@vueuse/core": "^13.9.0"
@@ -26,6 +27,7 @@
     "@davidingplus/vitepress-waline-live2d": "^1.1.0",
     "element-plus": "^2.11.2",
     "gray-matter": "^4.0.3",
+    "json2md": "^2.0.3",
     "markdown-it": "^14.1.0",
     "unplugin-auto-import": "^20.1.0",
     "unplugin-vue-components": "^29.0.0",
