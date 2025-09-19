@@ -9,10 +9,6 @@ import { fileURLToPath, URL } from 'node:url'
 
 import llmstxt from 'vitepress-plugin-llms'
 
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -73,14 +69,7 @@ export default defineConfig({
   vite: {
     plugins: [
       groupIconVitePlugin(),
-      llmstxt(),
-      AutoImport({
-        resolvers: [ElementPlusResolver({ importStyle: false })]
-      }),
-      Components({
-        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-        resolvers: [ElementPlusResolver({ importStyle: false })]
-      })
+      llmstxt()
     ],
     experimental: {
       enableNativePlugin: true

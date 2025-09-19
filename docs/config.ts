@@ -121,9 +121,7 @@ function guideSidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '简介', link: '/' },
-                { text: '更新日志', link: '/changelog' },
-                { text: '表格测试', link: '/table-test' }
-            ]
+                { text: '更新日志', link: '/changelog' }]
         },
         {
             text: '快速上手',

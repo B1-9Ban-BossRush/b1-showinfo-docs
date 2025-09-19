@@ -12,8 +12,6 @@ import '@davidingplus/vitepress-back-to-top-button/style.css'
 import ImageViewerP from '@davidingplus/vitepress-image-viewer'
 import '@davidingplus/vitepress-image-viewer/style.css'
 
-import 'element-plus/dist/index.css'
-
 
 export default {
   extends: DefaultTheme,
