@@ -13,9 +13,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "pnpm run generate-list && vitepress dev docs",
-    "build": "pnpm run generate-list && vitepress build docs",
-    "preview": "pnpm run build && vitepress preview docs",
+    "dev": "node scripts/generate-list-data.cjs && vitepress dev docs",
+    "build": "node scripts/generate-list-data.cjs && vitepress build docs",
+    "preview": "node scripts/generate-list-data.cjs && vitepress build docs && vitepress preview docs",
     "generate-list": "node scripts/generate-list-data.cjs"
   },
   "dependencies": {
