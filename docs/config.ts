@@ -122,7 +122,7 @@ function guideSidebar(): DefaultTheme.SidebarItem[] {
             items: [
                 { text: '简介', link: '/' },
                 { text: '更新日志', link: '/changelog' },
-                { text: 'Element Plus 测试', link: '/element-plus-test' }
+                { text: '表格测试', link: '/table-test' }
             ]
         },
         {
