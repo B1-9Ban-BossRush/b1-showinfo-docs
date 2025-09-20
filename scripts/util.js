@@ -81,7 +81,7 @@ export function convertSingleList(inputJsonPath) {
         if (section.table && section.table.length > 0) {
             // 按成绩排序，快的在前。
             const sortedTable = [...section.table].sort((a, b) => {
-                return parse(normalizeTime(a['成绩'])) - parse(normalizeTime(b['总成绩']))
+                return parse(normalizeTime(a['成绩'])) - parse(normalizeTime(b['成绩']))
             })
 
             // 给每行加行号
