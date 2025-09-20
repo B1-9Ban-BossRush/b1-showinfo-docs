@@ -10,13 +10,11 @@ export default defineAdditionalConfig({
     description: '黑神话悟空 实时关键数据显示 MOD 手册',
 
     themeConfig: {
-        nav: nav(),
+        nav: GetNav(),
 
         search: { options: searchOptions() },
 
-        sidebar: {
-            '/guide/': { base: '/guide/', items: guideSidebar() }
-        },
+        sidebar: getSidebar(),
 
         editLink: {
             pattern: 'https://github.com/DavidingPlus/b1-showinfo-docs/edit/master/docs/:path',
@@ -99,7 +97,7 @@ function searchOptions(): Partial<DefaultTheme.AlgoliaSearchOptions> {
     }
 }
 
-function nav(): DefaultTheme.NavItem[] {
+function GetNav(): DefaultTheme.NavItem[] {
     return [
         { text: '主页', link: '/' },
         {
@@ -107,18 +105,19 @@ function nav(): DefaultTheme.NavItem[] {
             activeMatch: `^/(guide|style-guide|cookbook|examples)/`,
             items: [
                 { text: '开始', link: '/guide' },
-                { text: '快速上手', link: '/guide/quick-start/install' }
+                { text: '快速上手', link: '/quick-start/install' }
             ]
         },
-        { text: '新榜链接', link: '/guide/ranking-list/new-list' },
-        { text: '旧榜链接', link: '/guide/ranking-list/old-list' }
+        { text: '新榜链接', link: '/ranking-list/new-list' },
+        { text: '旧榜链接', link: '/ranking-list/old-list' }
     ]
 }
 
-function guideSidebar(): DefaultTheme.SidebarItem[] {
+function getSidebar(): DefaultTheme.SidebarItem[] {
     return [
         {
             text: '开始',
+            base: '/guide',
             collapsed: false,
             items: [
                 { text: '简介', link: '/' },
@@ -127,20 +126,22 @@ function guideSidebar(): DefaultTheme.SidebarItem[] {
         },
         {
             text: '快速上手',
+            base: '/quick-start',
             collapsed: false,
             items: [
-                { text: 'MOD 安装教程', link: 'quick-start/install' },
-                { text: '版本发布日志', link: 'quick-start/release' },
-                { text: '新榜规则', link: 'quick-start/rules' },
-                { text: 'OBS 录制环境搭建', link: 'quick-start/record-video' }
+                { text: 'MOD 安装教程', link: '/install' },
+                { text: '版本发布日志', link: '/release' },
+                { text: '新榜规则', link: '/rules' },
+                { text: 'OBS 录制环境搭建', link: '/record-video' }
             ]
         },
         {
             text: '成绩榜单',
+            base: '/ranking-list',
             collapsed: false,
             items: [
-                { text: '新榜单', link: 'ranking-list/new-list' },
-                { text: '旧榜单', link: 'ranking-list/old-list' }
+                { text: '新榜单', link: '/new-list' },
+                { text: '旧榜单', link: '/old-list' }
             ]
         }
     ]

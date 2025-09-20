@@ -1,5 +1,5 @@
-docs/guide/ranking-list/*
-!docs/guide/ranking-list/.gitkeep
+docs/ranking-list/*
+!docs/ranking-list/.gitkeep
 
 *.assets/
 assets/
