@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import fs from 'fs';
 import parse from 'parse-duration';
-import { normalizeTime, convertSingleList, convertTotalList, generateRankingList } from '../scripts/util.js';
+import { normalizeTime, convertSingleList, convertTotalList } from '../scripts/util.js';
 
 
 describe('normalizeTime', () => {
@@ -136,6 +136,22 @@ describe('convertTotalList', () => {
 
     after(() => {
         fs.unlinkSync(testJsonPath);
+    });
+
+    it('包含表头', () => {
+        const md = convertTotalList(testJsonPath);
+
+        expect(md).to.include('选手');
+        expect(md).to.include('三虎');
+        expect(md).to.include('四僧');
+        expect(md).to.include('四龙');
+        expect(md).to.include('六将');
+        expect(md).to.include('六虫');
+        expect(md).to.include('万凶');
+        expect(md).to.include('心猿');
+        expect(md).to.include('梅山');
+        expect(md).to.include('六根');
+        expect(md).to.include('总成绩');
     });
 
     it('总成绩排序正确', () => {
