@@ -1,28 +1,80 @@
 [
     {
         "选手": "馒头",
-        "三虎": "54''52",
-        "四僧": "1'28''78",
-        "四龙": "1'53''64",
-        "六将": "2'35''04",
-        "六虫": "2'20''49",
-        "万凶": "2'40''50",
-        "心猿": "1'19''93",
-        "梅山": "3'23''94",
-        "六根": "5'03''94",
+        "三虎": [
+            "54''52",
+            "https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "四僧": [
+            "1'28''78",
+            "https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "四龙": [
+            "1'53''64",
+            "https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "六将": [
+            "2'35''04",
+            "https://www.douyin.com/video/7549033752597400841"
+        ],
+        "六虫": [
+            "2'20''49"
+        ],
+        "万凶": [
+            "2'40''50",
+            "https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=main&modal_id=7545555798844263721"
+        ],
+        "心猿": [
+            "1'19''93",
+            "https://www.douyin.com/user/MS4wLjABAAAAJWMgIlFFBb3ivfHZIbmh2V7AjrGLub4jJb7wU77gNE7iLK1hKUSPyPNsGki9n2qf?from_tab_name=live&modal_id=7547250761042824474"
+        ],
+        "梅山": [
+            "3'23''94",
+            "https://www.bilibili.com/video/BV11ipMzgEQ6?spm_id_from=333.788.player.player_end_recommend_autoplay&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "六根": [
+            "5'03''94",
+            "https://www.douyin.com/video/7550238943002905892"
+        ],
         "总成绩": "21'40''78"
     },
     {
         "选手": "山月为关",
-        "三虎": "53''79",
-        "四僧": "1'26''75",
-        "四龙": "1'54''15",
-        "六将": "2'31''50",
-        "六虫": "2'14''44",
-        "万凶": "2'46''08",
-        "心猿": "1'21''98",
-        "梅山": "3'03''56",
-        "六根": "5'05''88",
+        "三虎": [
+            "53''79",
+            "https://www.bilibili.com/video/BV1aTaZz1EEs/?vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "四僧": [
+            "1'26''75",
+            "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&p=2"
+        ],
+        "四龙": [
+            "1'54''15",
+            "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&p=3"
+        ],
+        "六将": [
+            "2'31''50",
+            "https://www.bilibili.com/video/BV1zWHkzpE7Z/?spm_id_from=333.337.search-card.all.click&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "六虫": [
+            "2'14''44",
+            "https://www.bilibili.com/video/BV1pQp2zCE34/?spm_id_from=333.337.search-card.all.click&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+        ],
+        "万凶": [
+            "2'46''08",
+            "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&p=6"
+        ],
+        "心猿": [
+            "1'21''98",
+            "https://www.bilibili.com/video/BV1aTaZz1EEs?spm_id_from=333.788.videopod.episodes&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&p=7"
+        ],
+        "梅山": [
+            "3'03''56",
+            "https://www.bilibili.com/video/BV1rUHfzgEYp/?spm_id_from=333.337.search-card.all.click"
+        ],
+        "六根": [
+            "5'05''88"
+        ],
         "总成绩": "21'18''13"
     }
 ]
