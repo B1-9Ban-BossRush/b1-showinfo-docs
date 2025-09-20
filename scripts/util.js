@@ -81,7 +81,7 @@ export function convertSingleList(inputJsonPath) {
         if (section.table && section.table.length > 0) {
             // 按成绩排序，快的在前。
             const sortedTable = [...section.table].sort((a, b) => {
-                return parse(normalizeTime(a['成绩'])) - parse(normalizeTime(b['成绩']))
+                return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
             })
 
             // 给每行加行号
@@ -94,7 +94,18 @@ export function convertSingleList(inputJsonPath) {
             const columnNames = Object.keys(tableRows[0])
 
             // 每行的数据数组。
-            const tableContent = tableRows.map(row => columnNames.map(col => row[col]))
+            const tableContent = tableRows.map(row =>
+                columnNames.map(col => {
+                    const e = row[col]
+
+                    // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。
+                    return Array.isArray(e)
+                        ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                        : e
+                })
+            )
+
+            // console.log(tableContent)
 
             elements.push({
                 table: {
@@ -134,7 +145,15 @@ export function convertTotalList(inputJsonPath) {
         const columnNames = Object.keys(sortedTable[0])
 
         // 每行的数据数组。
-        const tableContent = sortedTable.map(row => columnNames.map(col => row[col]))
+        const tableContent = sortedTable.map(row =>
+            columnNames.map(col => {
+                const e = row[col]
+                // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。
+                return Array.isArray(e)
+                    ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                    : e
+            })
+        )
 
         markdownElements.push({
             table: {
