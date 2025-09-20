@@ -12,8 +12,8 @@ import '@davidingplus/vitepress-back-to-top-button/style.css'
 import ImageViewerP from '@davidingplus/vitepress-image-viewer'
 import '@davidingplus/vitepress-image-viewer/style.css'
 
-import VPSwiper from '@cssnr/vitepress-swiper'
-import '@cssnr/vitepress-swiper/style.css'
+import VPSwiper from '@davidingplus/vitepress-swiper'
+import '@davidingplus/vitepress-swiper/style.css'
 
 
 export default {
