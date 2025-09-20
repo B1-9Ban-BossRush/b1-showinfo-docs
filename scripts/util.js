@@ -23,7 +23,7 @@ import parse from "parse-duration"
  * @returns {string}
  */
 export function normalizeTime(timeStr) {
-    timeStr = String(str).trim()
+    timeStr = String(timeStr).trim()
 
     // 去掉末尾可能的 ? 号（毫秒位不知道成绩的情况，默认视为 0。
     if (timeStr.endsWith('?')) {
