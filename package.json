@@ -25,6 +25,7 @@
   "devDependencies": {
     "@davidingplus/vitepress-back-to-top-button": "^1.0.2",
     "@davidingplus/vitepress-image-viewer": "^1.1.5",
+    "@davidingplus/vitepress-swiper": "^0.2.1",
     "@davidingplus/vitepress-waline-live2d": "^1.1.0",
     "chai": "^6.0.1",
     "gray-matter": "^4.0.3",

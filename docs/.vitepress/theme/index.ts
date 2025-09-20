@@ -12,6 +12,9 @@ import '@davidingplus/vitepress-back-to-top-button/style.css'
 import ImageViewerP from '@davidingplus/vitepress-image-viewer'
 import '@davidingplus/vitepress-image-viewer/style.css'
 
+import VPSwiper from '@davidingplus/vitepress-swiper'
+import '@davidingplus/vitepress-swiper/style.css'
+
 
 export default {
   extends: DefaultTheme,
@@ -23,6 +26,7 @@ export default {
   enhanceApp(ctx) {
     BackToTopButton(ctx.app)
     ImageViewerP(ctx.app)
+    ctx.app.component('VPSwiper', VPSwiper)
   },
   setup() {
     useWaline({
