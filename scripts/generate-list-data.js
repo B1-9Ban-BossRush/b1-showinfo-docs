@@ -20,5 +20,5 @@ generateRankingList(
     'data/old-list-single.json',
     'data/old-list-total.json',
     'docs/guide/ranking-list/old-list.md',
-    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n'
+    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n'
 )
