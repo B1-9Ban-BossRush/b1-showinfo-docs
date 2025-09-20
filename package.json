@@ -31,6 +31,8 @@
     "json2md": "^2.0.3",
     "markdown-it": "^14.1.0",
     "mocha": "^11.7.2",
+    "moment": "^2.30.1",
+    "moment-duration-format": "^2.3.2",
     "parse-duration": "^2.1.4",
     "vitepress": "^2.0.0-alpha.6",
     "vitepress-plugin-group-icons": "^1.6.3",
