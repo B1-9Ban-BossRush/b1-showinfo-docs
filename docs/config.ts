@@ -143,6 +143,14 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
                 { text: '新榜单', link: '/new-list' },
                 { text: '旧榜单', link: '/old-list' }
             ]
+        },
+        {
+            text: '速通日常',
+            base: '/daily',
+            collapsed: false,
+            items: [
+                { text: '相册', link: '/gallery' }
+            ]
         }
     ]
 }
