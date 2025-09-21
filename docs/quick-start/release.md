@@ -22,6 +22,8 @@
 
 下载链接如下：
 
+- [v1.1-dev.11](https://lzx0626.lanzouq.com/ipOen36opu6f)：第一，尝试降低闪退率。第二，修改文字间隔。
+
 - [v1.1-dev.10](https://lzx0626.lanzouq.com/irULC36lmukd)：第一，改了代码结构，尝试降低闪退率。第二，更换官方字体，更加美观。第三，增加了法力、气力相关数据。第四，兼容主线速通需求。
 
 - [v1.1-dev.9](https://lzx0626.lanzouq.com/iHTbl36adycj)：连战成功、连战失败、试演成功、失败菜单界面都能显示耗时和暴伤明细。同时修改计时器 bug。
