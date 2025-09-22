@@ -149,7 +149,8 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             base: '/others',
             collapsed: false,
             items: [
-                { text: '相册', link: '/gallery' }
+                { text: '相册', link: '/gallery' },
+                { text: '其他 MOD 分享', link: '/other-mods' }
             ]
         }
     ]
