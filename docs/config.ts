@@ -132,7 +132,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
                 { text: 'MOD 安装教程', link: '/install' },
                 { text: '版本发布日志', link: '/release' },
                 { text: '新榜规则', link: '/rules' },
-                { text: 'OBS 录制环境搭建', link: '/record-video' }
+                { text: 'OBS 录制环境搭建', link: '/obs-recording-setup' }
             ]
         },
         {
@@ -145,8 +145,8 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             ]
         },
         {
-            text: '速通日常',
-            base: '/daily',
+            text: '其他',
+            base: '/others',
             collapsed: false,
             items: [
                 { text: '相册', link: '/gallery' }
