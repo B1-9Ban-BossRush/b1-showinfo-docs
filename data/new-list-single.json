@@ -143,6 +143,14 @@
         "title": "四僧",
         "table": [
             {
+                "选手": "零零妖",
+                "成绩": [
+                    "1'42''44",
+                    "https://www.bilibili.com/video/BV1kUJZzeE8y/?spm_id_from=333.337.search-card.all.click&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/9/22"
+            },
+            {
                 "选手": "福娃芙卡",
                 "成绩": [
                     "1'29''72",
@@ -349,16 +357,26 @@
         "title": "六虫",
         "table": [
             {
+                "选手": "xuan",
+                "成绩": [
+                    "2'16''22",
+                    "https://www.bilibili.com/video/BV1msWcztESn/?spm_id_from=333.788.top_right_bar_window_history.content.click&vd_source=6d2a5a555187150470bc28325a2d7c05"
+                ],
+                "日期": "2025/9/21"
+            },
+            {
                 "选手": "薛定谔",
                 "成绩": [
-                    "2'25''11"
+                    "2'25''11",
+                    "https://www.bilibili.com/video/BV1dSWcz3ERd?vd_source=d9379e1bc0470f96ffb21ae71e1c19c5"
                 ],
                 "日期": "2025/9/21"
             },
             {
                 "选手": "天傲花",
                 "成绩": [
-                    "2'44''43"
+                    "2'44''43",
+                    "https://www.bilibili.com/video/BV1crWAzxEZ6/?spm_id_from=333.788.recommend_more_video.0&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
                 ],
                 "日期": "2025/9/21"
             },
@@ -415,6 +433,22 @@
     {
         "title": "万凶",
         "table": [
+            {
+                "选手": "起飞吧范佩西",
+                "成绩": [
+                    "3'05''89",
+                    "https://www.bilibili.com/video/BV1RZp9zQEDf?spm_id_from=333.788.player.switch&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9&p=2"
+                ],
+                "日期": "2025/9/20"
+            },
+            {
+                "选手": "极了无",
+                "成绩": [
+                    "2'44''75",
+                    "https://www.bilibili.com/video/BV1taJdzqEy6/?spm_id_from=333.1387.homepage.video_card.click&vd_source=0b4e242ee4e92e5e7e607ff8e34f1fd9"
+                ],
+                "日期": "2025/9/21"
+            },
             {
                 "选手": "小何的平方",
                 "成绩": [
@@ -582,7 +616,8 @@
             {
                 "选手": "Y-Zz",
                 "成绩": [
-                    "1'19''80"
+                    "1'19''80",
+                    "https://www.douyin.com/video/7552378756736847162"
                 ],
                 "日期": "2025/9/21"
             },
