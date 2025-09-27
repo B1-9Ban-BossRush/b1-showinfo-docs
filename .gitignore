@@ -1,5 +1,5 @@
-docs/ranking-list/*
-!docs/ranking-list/.gitkeep
+docs/ranking-list/new-list.md
+docs/ranking-list/old-list.md
 
 *.assets/
 assets/

@@ -141,6 +141,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             collapsed: false,
             items: [
                 { text: '新榜单', link: '/new-list' },
+                { text: '新榜单海报', link: '/new-list-poster' },
                 { text: '旧榜单', link: '/old-list' }
             ]
         },
