@@ -13,7 +13,7 @@ generateRankingList(
     'data/new-list-single.json',
     'data/new-list-total.json',
     'docs/ranking-list/new-list.md',
-    '# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n'
+    '# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n目前网站新榜单暂不更新，正在调研自动同步腾讯文档数据的方案，后续尽量实现自动更新。\n\n'
 )
 
 generateRankingList(
