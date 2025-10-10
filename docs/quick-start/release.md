@@ -1,6 +1,6 @@
 # 版本发布日志
 
-> 以下所有资源的链接均为蓝奏云盘的分享链接。若想直链下载，可以科学上网去我的 Github 仓库的 [Release](https://github.com/DavidingPlus/b1-showinfo-docs/releases) 进行下载。别问为什么没有 Gitee，这玩意狗都不用。
+> 以下所有资源的链接均为蓝奏云盘的分享链接。若想直链下载，可以科学上网去我的 Github 仓库的 [Release](https://github.com/B1-9Ban-BossRush/b1-showinfo-docs/releases) 进行下载。别问为什么没有 Gitee，这玩意狗都不用。
 
 ## ShowInfo
 

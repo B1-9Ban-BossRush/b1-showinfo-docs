@@ -48,7 +48,7 @@ export default defineConfig({
     logo: { src: '/assets/logo.svg', width: 24, height: 24 },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/DavidingPlus/b1-showinfo-docs' }
+      { icon: 'github', link: 'https://github.com/B1-9Ban-BossRush/b1-showinfo-docs' }
     ],
 
     search: {

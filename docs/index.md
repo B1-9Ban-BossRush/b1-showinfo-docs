@@ -12,7 +12,7 @@ hero:
       link: /guide
     - theme: alt
       text: GitHub
-      link: https://github.com/DavidingPlus/b1-showinfo-docs
+      link: https://github.com/B1-9Ban-BossRush/b1-showinfo-docs
 
 features:
   - title: 速通战

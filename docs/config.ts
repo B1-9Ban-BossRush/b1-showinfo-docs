@@ -17,7 +17,7 @@ export default defineAdditionalConfig({
         sidebar: getSidebar(),
 
         editLink: {
-            pattern: 'https://github.com/DavidingPlus/b1-showinfo-docs/edit/master/docs/:path',
+            pattern: 'https://github.com/B1-9Ban-BossRush/b1-showinfo-docs/edit/master/docs/:path',
             text: '在 GitHub 上编辑此页面'
         },
 
