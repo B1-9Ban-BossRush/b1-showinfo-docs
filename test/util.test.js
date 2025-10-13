@@ -60,8 +60,7 @@ describe('convertSingleList', () => {
     const testJsonPath = './test-single.json';
     const testData = [
         {
-            title: "三虎",
-            table: [
+            "三虎": [
                 {
                     "选手": "张三",
                     "成绩": ["50''99"],
@@ -94,6 +93,8 @@ describe('convertSingleList', () => {
 
     it('成绩排序正确', () => {
         const md = convertSingleList(testJsonPath);
+
+        console.log(md)
 
         expect(md.indexOf('张三')).to.be.greaterThan(md.indexOf('李四'));
     });
@@ -156,6 +157,8 @@ describe('convertTotalList', () => {
 
     it('总成绩排序正确', () => {
         const md = convertTotalList(testJsonPath);
+
+        console.log(md)
 
         expect(md).to.include('总榜');
         expect(md.indexOf('李四')).to.be.lessThan(md.indexOf('张三'));
