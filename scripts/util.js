@@ -1,11 +1,15 @@
 /**
  * @file util.js
  * @author DavidingPlus (davidingplus@qq.com)
- * @brief 将榜单单项和总榜的 JSON 数据转化为 MarkDown 文档。
- * @details 整个执行流程是读取原始 json 数据，然后将成绩转化为 parse-duration 需要的格式，对成绩进行排序，将其转化为 json2md 需要的格式，进行转化，最后输出到 Markdown 文件中。注意输出的是整个文件，包括 h 标题和表格以及其他文字。
+ * @brief 将榜单单项和总榜的 Excel/JSON 数据生成完整 Markdown 文档。
+ * @details 流程：
+ * 1. 从 Excel 文件解析单项榜和总榜，生成对应 JSON 数据。
+ * 2. 读取或生成的 JSON 数据，规范化成绩为 parse-duration 可识别格式。
+ * 3. 按成绩排序。
+ * 4. 转换为 json2md 所需格式，包括标题和表格。
+ * 5. 输出完整 Markdown 文档。
  * 
  * Copyright (c) 2025 DavidingPlus
- * 
  */
 import fs from 'fs'
 import json2md from 'json2md'
@@ -176,42 +180,55 @@ export function generateRankingList(singleJsonPath, totalJsonPath, outputMdPath,
     fs.writeFileSync(outputMdPath, content, 'utf-8')
 }
 
+/**
+ * @brief 解析单项成绩表格，生成 JSON 数据。
+ * @param filePath Excel 文件路径。
+ * @param sheetIndex 工作表索引。
+ * @return 返回按标题分组的单项成绩 JSON。
+ */
 export function generateJsonSingle(filePath, sheetIndex) {
-    const workbook = XLSX.readFile(filePath);
-    const sheetName = workbook.SheetNames[sheetIndex];
-    const sheet = workbook.Sheets[sheetName];
-
-    const range = XLSX.utils.decode_range(sheet["!ref"]);
+    const workbook = XLSX.readFile(filePath); // 读取 Excel 文件。
+    const sheetName = workbook.SheetNames[sheetIndex]; // 获取工作表名称。
+    const sheet = workbook.Sheets[sheetName]; // 获取工作表对象。
+    const range = XLSX.utils.decode_range(sheet["!ref"]); // 获取数据范围。
 
     const titles = [];
+    // 提取第一行标题及起始列。
     for (let c = range.s.c; c <= range.e.c; c++) {
         const cell = sheet[XLSX.utils.encode_cell({ r: range.s.r, c })];
-        if (cell && cell.v && String(cell.v).trim()) {
-            titles.push({ title: String(cell.v).trim(), startCol: c });
-        }
+        if (cell && cell.v && String(cell.v).trim()) titles.push({ title: String(cell.v).trim(), startCol: c });
     }
 
     const res = [];
+    // 遍历每个标题列生成选手数据。
     for (const { title, startCol } of titles) {
+        // 跳过不需要解析的列，如备注或总次数。
         if ("备注" === title || "总次数" === title) continue;
 
         const arr = [];
 
+        // 从第 3 行开始遍历每个选手的数据（前两行是标题）。
         for (let r = 2; r <= range.e.r; r++) {
+            // 获取选手姓名、成绩和日期单元格。
             const nameCell = sheet[XLSX.utils.encode_cell({ r, c: startCol })];
             const scoreCell = sheet[XLSX.utils.encode_cell({ r, c: startCol + 1 })];
             const dateCell = sheet[XLSX.utils.encode_cell({ r, c: startCol + 2 })];
 
+            // 如果姓名为空，跳过该行。
             if (!nameCell || nameCell.v == null) continue;
 
             const name = String(nameCell.v).trim();
+            // 特殊行处理：遇到破纪录次数结束，遇到前十玩家跳过。
             if ("破纪录次数(含旧榜)↓" === name) break;
             if ("前十玩家↑" === name) continue;
 
+            // 读取成绩和链接。
             const score = scoreCell ? String(scoreCell.v) : "";
             const link = scoreCell?.l?.Target || "";
+            // 日期优先使用格式化显示，否则取原始值。
             const date = dateCell ? String(dateCell.w || dateCell.v) : "";
 
+            // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
             arr.push({
                 选手: name,
                 成绩: link ? [score, link] : [score],
@@ -219,68 +236,66 @@ export function generateJsonSingle(filePath, sheetIndex) {
             });
         }
 
-        if (arr.length > 0) {
-            res.push({ [title]: arr }); // key 为 title
-        }
+        // 如果该组有选手数据，则添加到结果数组。
+        if (arr.length > 0) res.push({ [title]: arr });
     }
+
 
     return res;
 }
 
+/**
+ * @brief 解析总成绩表格，生成 JSON 数据。
+ * @param filePath Excel 文件路径。
+ * @param sheetIndex 工作表索引。
+ * @return 返回总成绩 JSON。
+ */
 export function generateJsonTotal(filePath, sheetIndex) {
-    const workbook = XLSX.readFile(filePath);
-    const sheetName = workbook.SheetNames[sheetIndex];
-    const sheet = workbook.Sheets[sheetName];
+    const workbook = XLSX.readFile(filePath); // 读取 Excel 文件。
+    const sheetName = workbook.SheetNames[sheetIndex]; // 获取工作表名称。
+    const sheet = workbook.Sheets[sheetName]; // 获取工作表对象。
+    const range = XLSX.utils.decode_range(sheet["!ref"]); // 获取数据范围。
 
-    // 解析范围。
-    const range = XLSX.utils.decode_range(sheet["!ref"]);
-
-    // 提取表头。
     const headers = [];
+    // 提取表头列。
     for (let c = range.s.c; c <= range.e.c; c++) {
         const cellAddress = XLSX.utils.encode_cell({ r: range.s.r, c });
         const cell = sheet[cellAddress];
-        if (cell && cell.v) headers.push({ name: cell.v, col: c }); // 只保留有标题的列
+        if (cell && cell.v) headers.push({ name: cell.v, col: c });
     }
 
-    // 逐行读取数据。
     const res = [];
+    // 遍历每行数据，从第二行开始（第一行是表头）。
     for (let r = range.s.r + 1; r <= range.e.r; r++) {
-        const rowObj = {};
-        let hasName = false;
+        const rowObj = {};      // 存储当前行的选手信息。
+        let hasName = false;    // 标记这一行是否有选手姓名。
 
+        // 遍历每列，根据表头名称解析数据。
         for (const { name: header, col: c } of headers) {
-            const cellAddress = XLSX.utils.encode_cell({ r, c });
-            const cell = sheet[cellAddress];
+            const cellAddress = XLSX.utils.encode_cell({ r, c }); // 单元格地址。
+            const cell = sheet[cellAddress];                      // 获取单元格对象。
 
+            // 如果是选手列，检查姓名是否存在。
             if ("选手" === header) {
-                if (!cell || !cell.v) break; // 选手为空直接跳过整行
+                if (!cell || !cell.v) break; // 选手为空直接跳过整行。
                 hasName = true;
-                rowObj["选手"] = cell.v;
+                rowObj["选手"] = cell.v;     // 保存选手姓名。
                 continue;
             }
 
+            // 如果是总成绩列。
             if ("总成绩" === header) {
-                if (cell && cell.v) {
-                    rowObj[header] = cell.v;
-                } else {
-                    rowObj[header] = [];
-                }
+                // 总成绩可能为空，如果有则直接取值，否则设为空数组。
+                rowObj[header] = cell && cell.v ? cell.v : [];
                 continue;
             }
 
-            if (cell && cell.v) {
-                if (cell.l && cell.l.Target) {
-                    rowObj[header] = [cell.v, cell.l.Target]; // 有链接加上链接。
-                } else {
-                    rowObj[header] = [cell.v]; // 没有链接直接存成绩即可。
-                }
-            } else {
-                rowObj[header] = []; // 没成绩的保留空数组。
-            }
+            // 普通成绩列：若单元格有链接，则包含链接，否则仅保存成绩值。
+            rowObj[header] = cell && cell.v ? (cell.l && cell.l.Target ? [cell.v, cell.l.Target] : [cell.v]) : [];
         }
 
-        if (hasName) res.push(rowObj); // 只保留有姓名的行。
+        // 如果行中有选手姓名，才加入结果数组。
+        if (hasName) res.push(rowObj);
     }
 
 
