@@ -138,7 +138,7 @@ export function convertTotalList(inputJsonPath) {
     if (rawJson.length > 0) {
         // 按照“总成绩”进行排序。
         const sortedTable = [...rawJson].sort((a, b) => {
-            return parse(normalizeTime(a['总成绩'])) - parse(normalizeTime(b['总成绩']))
+            return a['总成绩'].length ? parse(normalizeTime(a['总成绩'])) : Infinity - b['总成绩'].length ? parse(normalizeTime(b['总成绩'])) : Infinity
         })
 
         // 获取列名（JSON 对象的字段名）。
@@ -148,9 +148,9 @@ export function convertTotalList(inputJsonPath) {
         const tableContent = sortedTable.map(row =>
             columnNames.map(col => {
                 const e = row[col]
-                // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。
+                // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。若数组长度为 0，则是空串，返回空。
                 return Array.isArray(e)
-                    ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
+                    ? (e.length === 0 ? '' : (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0]))
                     : e
             })
         )
