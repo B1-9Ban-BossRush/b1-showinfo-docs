@@ -66,46 +66,41 @@ export function convertSingleList(inputJsonPath) {
     const rawJson = JSON.parse(fs.readFileSync(inputJsonPath, 'utf-8'))
 
     // 生成标题：单项。
-    const markdownElements = [
-        { h2: '单项' }
-    ]
+    const markdownElements = [{ h2: '单项' }]
 
-    // 转换每个 section。
-    markdownElements.push(rawJson.flatMap(section => {
-        // 生成标题，如三虎、四僧等。
-        const elements = [
-            { h3: section.title }
-        ]
+    // rawJson 是数组，每个元素是 { "组名": [选手数组] }
+    rawJson.forEach(section => {
+        const groupName = Object.keys(section)[0]          // 三虎、四僧等
+        const tableData = section[groupName]
 
-        // 生成表格。
-        if (section.table && section.table.length > 0) {
-            // 按成绩排序，快的在前。
-            const sortedTable = [...section.table].sort((a, b) => {
-                return parse(normalizeTime(a['成绩'][0])) - parse(normalizeTime(b['成绩'][0]))
+        // 生成组标题
+        const elements = [{ h3: groupName }]
+
+        if (tableData && tableData.length > 0) {
+            // 按成绩排序，快的在前
+            const sortedTable = [...tableData].sort((a, b) => {
+                return normalizeTime(a['成绩'][0]) - normalizeTime(b['成绩'][0])
             })
 
-            // 给每行加行号
+            // 给每行加排名
             const tableRows = sortedTable.map((entry, index) => ({
                 排名: 1 + index,
                 ...entry
             }))
 
-            // 获取列名（表头）。
+            // 获取列名
             const columnNames = Object.keys(tableRows[0])
 
-            // 每行的数据数组。
+            // 构造表格内容
             const tableContent = tableRows.map(row =>
                 columnNames.map(col => {
                     const e = row[col]
-
-                    // 若是数组且长度大于 1 代表是带链接的成绩，需构造超链接，若只有成绩，则返回 0 号元素，去掉括号。
+                    // 若是数组且长度大于 1 代表带链接
                     return Array.isArray(e)
                         ? (e.length > 1 ? `[${e[0]}](${e[1]})` : e[0])
                         : e
                 })
             )
-
-            // console.log(tableContent)
 
             elements.push({
                 table: {
@@ -115,8 +110,8 @@ export function convertSingleList(inputJsonPath) {
             })
         }
 
-        return elements
-    }))
+        markdownElements.push(...elements)
+    })
 
     return json2md(markdownElements)
 }
