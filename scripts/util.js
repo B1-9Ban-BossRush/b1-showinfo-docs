@@ -15,6 +15,7 @@ import fs from 'fs'
 import json2md from 'json2md'
 import parse from "parse-duration"
 import XLSX from "xlsx"
+import moment from 'moment'
 
 
 /**
@@ -226,7 +227,7 @@ export function generateJsonSingle(filePath, sheetIndex) {
             const score = scoreCell ? String(scoreCell.v) : ""
             const link = scoreCell?.l?.Target || ""
             // 日期优先使用格式化显示，否则取原始值。
-            const date = dateCell ? String(dateCell.w || dateCell.v) : ""
+            const date = moment(new Date((dateCell.v - 25569) * 86400 * 1000)).format("YYYY/MM/DD");
 
             // 构造选手对象，成绩带链接则使用数组 [成绩, 链接]。
             arr.push({
