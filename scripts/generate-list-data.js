@@ -11,7 +11,7 @@ import fs from 'fs'
 
 
 console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
-if ("dev" === process.env.npm_lifecycle_event) {
+if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env.npm_lifecycle_event) {
     fs.writeFileSync("data/new-list-single.json", JSON.stringify(generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1), null, 4), "utf-8")
 
     fs.writeFileSync("data/new-list-total.json", JSON.stringify(generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2), null, 4), "utf-8")
