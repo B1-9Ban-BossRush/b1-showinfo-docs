@@ -18,6 +18,8 @@ v2.0-dev.x 已经实现基础数据展示、血量显示、计时器、结算页
 
 下载链接如下：
 
+- [v2.0-dev.7](https://lzx0626.lanzouq.com/it06z38tuvhe)
+
 - [v2.0-dev.6](https://lzx0626.lanzouq.com/ieTUg37qpene)
 
 - [v2.0-dev.5](https://lzx0626.lanzouq.com/impJV37f68ni)
