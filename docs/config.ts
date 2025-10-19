@@ -131,7 +131,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             items: [
                 { text: 'MOD 安装教程', link: '/install' },
                 { text: '版本发布日志', link: '/release' },
-                { text: '新榜规则', link: '/rules' },
+                { text: '版本回退教程', link: '/rollback' },
                 { text: 'OBS 录制环境搭建', link: '/obs-recording-setup' }
             ]
         },
@@ -140,6 +140,7 @@ function getSidebar(): DefaultTheme.SidebarItem[] {
             base: '/ranking-list',
             collapsed: false,
             items: [
+                { text: '新榜规则', link: '/rules' },
                 { text: '新榜单', link: '/new-list' },
                 { text: '新榜单海报', link: '/new-list-poster' },
                 { text: '旧榜单', link: '/old-list' }
