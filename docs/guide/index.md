@@ -20,5 +20,5 @@
 
 欢迎加入九禁速通交流群（九禁速通第一人@蚌的粉丝群）：1037297581。
 
-<center><img src="https://cdn.davidingplus.cn/images/2025/08/27/蚌-QQ%20群.jpg" alt="蚌-QQ 群" style="zoom:35%;" /></center>
+<div align="center"><img src="https://cdn.davidingplus.cn/images/2025/08/27/蚌-QQ%20群.jpg" alt="蚌-QQ 群" style="zoom:35%;" /></div>
 

@@ -43,7 +43,7 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 在打开 OBS 之前，请先设置一下桌面的快捷方式的属性，右键快捷方式，选择属性，选择兼容性，勾选上以管理员模式启动。避免运行过程中 OBS 缺少管理员权限导致无法正常录制或直播。
 
-<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123306001.png" alt="image-20250830123306001" style="zoom:55%;" /></center>
+<div align="center"><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830123306001.png" alt="image-20250830123306001" style="zoom:55%;" /></div>
 
 打开 OBS 以后，你的界面大概是这样的：
 
@@ -51,7 +51,7 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 下面的源默认是空的，我们需要在里面添加能捕捉到显示屏的内容。录制黑猴一般只用得到显示器采集和游戏采集。
 
-<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830113636306.png" alt="image-20250830113636306" style="zoom:40%;" /></center>
+<div align="center"><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830113636306.png" alt="image-20250830113636306" style="zoom:40%;" /></div>
 
 关于显示器采集，采集方式默认自动即可，显示器选择你自己的显示器就行，这样 OBS 就能正常抓取到你的屏幕了。
 
@@ -114,7 +114,7 @@ OBS 能在 Steam 商店中找到，直接下载即可。
 
 完事以后重新打开 OBS，在添加源里面就会发现多了一个**输入叠加**的选项。这个就是添加键鼠映射的入口。
 
-<center><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131752608.png" alt="image-20250830131752608" style="zoom: 40%;" /></center>
+<div align="center"><img src="https://cdn.davidingplus.cn/images/2025/08/30/image-20250830131752608.png" alt="image-20250830131752608" style="zoom: 40%;" /></div>
 
 以键盘映射为例，点击输入叠加，会让你选择贴图文件和配置文件。这些东西在上文提到的另一个文件 input-overlay-5.0.6-presets.zip 中，官方给了我们一些预设，直接拿来使用即可。将该文件解压出来以后，放到你自己找得到的位置（不一定是 OBS 的安装根目录）即可。
 
