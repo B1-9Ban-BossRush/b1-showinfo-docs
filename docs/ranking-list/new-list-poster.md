@@ -10,37 +10,37 @@
 
 ### 三虎
 
-<center><img src="https://i0.hdslb.com/bfs/new_dyn/b6902d7bebbf73c939ab4451c9d5651725731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="https://i0.hdslb.com/bfs/new_dyn/b6902d7bebbf73c939ab4451c9d5651725731393.jpg" style="zoom:20%;" /></div>
 
 ### 四僧
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/167803bd0b3d25d7d04c73440ecee07125731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/167803bd0b3d25d7d04c73440ecee07125731393.jpg" style="zoom:20%;" /></div>
 
 ### 四渎龙神
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/65831a4b3dd8b9bcbae9fa437735d69525731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/65831a4b3dd8b9bcbae9fa437735d69525731393.jpg" style="zoom:20%;" /></div>
 
 ### 六健将
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/22e0af31b68569311aef1ce406ae164e25731393.jpg" style="zoom:48%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/22e0af31b68569311aef1ce406ae164e25731393.jpg" style="zoom:48%;" /></div>
 
 ### 蛰虫始振
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/22b1ff6cc12185af49bf86c05422c3ac25731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/22b1ff6cc12185af49bf86c05422c3ac25731393.jpg" style="zoom:20%;" /></div>
 
 ### 万样骁凶
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/bb3eb55bb0b91051d31ba991af80363525731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/bb3eb55bb0b91051d31ba991af80363525731393.jpg" style="zoom:20%;" /></div>
 
 ### 心猿
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/32315ca6e3ccaf91651b6e7ba0937bc325731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/32315ca6e3ccaf91651b6e7ba0937bc325731393.jpg" style="zoom:20%;" /></div>
 
 ### 梅山故人
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/552684a18c51bb862dd379901f54836c25731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/552684a18c51bb862dd379901f54836c25731393.jpg" style="zoom:20%;" /></div>
 
 ### 六根一性
 
-<center><img src="http://i0.hdslb.com/bfs/new_dyn/5c5d989df0db53574f5fffd880fe16ef25731393.jpg" style="zoom:20%;" /></center>
+<div align="center"><img src="http://i0.hdslb.com/bfs/new_dyn/5c5d989df0db53574f5fffd880fe16ef25731393.jpg" style="zoom:20%;" /></div>
 

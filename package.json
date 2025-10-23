@@ -35,6 +35,7 @@
     "moment": "^2.30.1",
     "moment-duration-format": "^2.3.2",
     "parse-duration": "^2.1.4",
+    "sass-embedded": "^1.93.2",
     "vitepress": "^2.0.0-alpha.6",
     "vitepress-plugin-group-icons": "^1.6.3",
     "vitepress-plugin-llms": "^1.7.3",

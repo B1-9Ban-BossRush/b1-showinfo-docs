@@ -25,7 +25,9 @@
 
 本来想写一个文字教程的，但是[朴泽辰](https://www.douyin.com/user/MS4wLjABAAAAVeeyNXGg1T8CRoj-yX8onV9lAThW3KQl7qnMEd-nWakKXcaxpz_G6SDsS0-FuF2G)大佬做了一个视频，这里就暂时不写了。都看视频去！
 
-视频链接：[https://www.douyin.com/video/7562351189380042022](https://www.douyin.com/video/7562351189380042022)
+视频链接：[https://www.bilibili.com/video/BV1hBWRzEEZW/](https://www.bilibili.com/video/BV1hBWRzEEZW/)
+
+<Bili bvid='BV1hBWRzEEZW' />
 
 ## 注意事项
 
