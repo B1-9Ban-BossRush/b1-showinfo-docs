@@ -8,7 +8,8 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 
 import llmstxt from 'vitepress-plugin-llms'
 
-import { contentSlide } from './theme/markdown/content-slide.ts';
+import { contentSlide } from './theme/utils/markdown/content-slide.ts';
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({

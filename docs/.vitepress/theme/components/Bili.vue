@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue';
-import { useSize } from '../hooks/useSize';
+import { useSize } from '../utils/hooks/useSize';
 
 
 interface Props {
