@@ -5,7 +5,6 @@ import {
 } from 'vitepress'
 
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
-import { fileURLToPath, URL } from 'node:url'
 
 import llmstxt from 'vitepress-plugin-llms'
 
@@ -54,9 +53,7 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        searchOptions: {
-          detailedView: true
-        }
+        detailedView: true
       }
     },
 
@@ -70,26 +67,7 @@ export default defineConfig({
     plugins: [
       groupIconVitePlugin(),
       llmstxt()
-    ],
-    experimental: {
-      enableNativePlugin: true
-    },
-    resolve: {
-      alias: [
-        {
-          find: /^.*\/VPDocAside\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/VPDocAside.vue', import.meta.url)
-          )
-        },
-        {
-          find: /^.*\/VPSidebar\.vue$/,
-          replacement: fileURLToPath(
-            new URL('./theme/components/VPSidebar.vue', import.meta.url)
-          )
-        }
-      ]
-    }
+    ]
   },
 
   transformPageData: (pageData, ctx) => {

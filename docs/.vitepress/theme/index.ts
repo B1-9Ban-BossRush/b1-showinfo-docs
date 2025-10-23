@@ -15,6 +15,8 @@ import '@davidingplus/vitepress-image-viewer/style.css'
 import VPSwiper from '@davidingplus/vitepress-swiper'
 import '@davidingplus/vitepress-swiper/style.css'
 
+import Bili from './components/Bili.vue';
+
 
 export default {
   extends: DefaultTheme,
@@ -27,6 +29,7 @@ export default {
     BackToTopButton(ctx.app)
     ImageViewerP(ctx.app)
     ctx.app.component('VPSwiper', VPSwiper)
+    ctx.app.component('Bili', Bili)
   },
   setup() {
     useWaline({
