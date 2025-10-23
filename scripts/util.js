@@ -25,7 +25,7 @@ import moment from 'moment'
  * 1'17''75 -> 1m17.75s
  * 1'29'' -> 1m29s
  * 3'16''? -> 3m16s
- * @param {string} timeStr - 输入时间字符串。
+ * @param {string} timeStr 输入时间字符串。
  * @returns {string}
  */
 export function normalizeTime(timeStr) {
@@ -64,7 +64,7 @@ export function normalizeTime(timeStr) {
 
 /**
  * 转换单项的数据，按成绩进行排序。
- * @param {string} inputJsonPath - 原始 JSON 文件路径。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
 export function convertSingleList(inputJsonPath) {
@@ -124,7 +124,7 @@ export function convertSingleList(inputJsonPath) {
 
 /**
  * 转换总榜的数据，按总成绩排序。
- * @param {string} inputJsonPath - 原始 JSON 文件路径。
+ * @param {string} inputJsonPath 原始 JSON 文件路径。
  * @returns {string}
  */
 export function convertTotalList(inputJsonPath) {
@@ -169,10 +169,10 @@ export function convertTotalList(inputJsonPath) {
 
 /**
  * 生成榜单 Markdown 文件。
- * @param {string} singleJsonPath - 单项 JSON 原文件路径。
- * @param {string} totalJsonPath - 总榜 JSON 原文件路径。
- * @param {string} outputMdPath - 输出的 Markdown 文件路径。
- * @param {string} pageHeader - 页面开头显示的标题和说明文字。
+ * @param {string} singleJsonPath 单项 JSON 原文件路径。
+ * @param {string} totalJsonPath 总榜 JSON 原文件路径。
+ * @param {string} outputMdPath 输出的 Markdown 文件路径。
+ * @param {string} pageHeader 页面开头显示的标题和说明文字。
  */
 export function generateRankingList(singleJsonPath, totalJsonPath, outputMdPath, pageHeader = '') {
     let content = pageHeader
@@ -185,9 +185,10 @@ export function generateRankingList(singleJsonPath, totalJsonPath, outputMdPath,
  * @brief 解析单项成绩表格，生成 JSON 数据。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
+ * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回按标题分组的单项成绩 JSON。
  */
-export function generateJsonSingle(filePath, sheetIndex) {
+export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -241,17 +242,17 @@ export function generateJsonSingle(filePath, sheetIndex) {
         if (arr.length > 0) res.push({ [title]: arr })
     }
 
-
-    return res
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
 }
 
 /**
  * @brief 解析总成绩表格，生成 JSON 数据。
  * @param filePath Excel 文件路径。
  * @param sheetIndex 工作表索引。
+ * @param outputJsonPath 输出的 Json 文件路径。
  * @return 返回总成绩 JSON。
  */
-export function generateJsonTotal(filePath, sheetIndex) {
+export function generateJsonTotal(filePath, sheetIndex, outputJsonPath) {
     const workbook = XLSX.readFile(filePath) // 读取 Excel 文件。
     const sheetName = workbook.SheetNames[sheetIndex] // 获取工作表名称。
     const sheet = workbook.Sheets[sheetName] // 获取工作表对象。
@@ -299,6 +300,17 @@ export function generateJsonTotal(filePath, sheetIndex) {
         if (hasName) res.push(rowObj)
     }
 
+    fs.writeFileSync(outputJsonPath, JSON.stringify(res, null, 4), "utf-8")
+}
 
-    return res
+/**
+ * @brief 读取指定文件的最后修改时间并写入文件。
+ * @param {string} filePath 源文件路径。
+ * @param {string} outputPath 输出文件路径。
+ */
+export function generateLastUpdatedTime(filePath, outputPath) {
+    const stats = fs.statSync(filePath)
+    const lastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+
+    fs.writeFileSync(outputPath, `${lastUpdatedTime}`, 'utf-8')
 }

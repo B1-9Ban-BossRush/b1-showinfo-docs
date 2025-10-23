@@ -6,28 +6,32 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateRankingList } from "./util.js"
+import { generateJsonSingle, generateJsonTotal, generateRankingList, generateLastUpdatedTime } from "./util.js"
 import fs from 'fs'
 
 
 console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
 if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env.npm_lifecycle_event) {
-    fs.writeFileSync("data/new-list-single.json", JSON.stringify(generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1), null, 4), "utf-8")
+    generateLastUpdatedTime("data/黑猴九禁速通榜(新).xlsx", "data/last-updated-time")
 
-    fs.writeFileSync("data/new-list-total.json", JSON.stringify(generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2), null, 4), "utf-8")
+    generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1, "data/new-list-single.json")
+
+    generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2, "data/new-list-total.json")
 }
 
+
+const lastUpdatedTime = fs.readFileSync('data/last-updated-time', 'utf-8').trim()
 
 generateRankingList(
     'data/new-list-single.json',
     'data/new-list-total.json',
     'docs/ranking-list/new-list.md',
-    '# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n'
+    `# 新榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。若更新不及时请优先参考[原文档](https://docs.qq.com/sheet/DTUhETnNCQ0RoRm9v)。\n\n> 榜单最后更新于：${lastUpdatedTime}\n\n`
 )
 
 generateRankingList(
     'data/old-list-single.json',
     'data/old-list-total.json',
     'docs/ranking-list/old-list.md',
-    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容，由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n'
+    '# 旧榜单\n\n本页面展示的榜单完全来源于原腾讯文档中的内容。由于已停更，仅展示前十名，[原文档](https://docs.qq.com/sheet/DTXNnc09DRGZWVGxt)。\n\n'
 )
