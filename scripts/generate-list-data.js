@@ -6,21 +6,17 @@
  * Copyright (c) 2025 DavidingPlus
  * 
  */
-import { generateJsonSingle, generateJsonTotal, generateRankingList } from "./util.js"
+import { generateJsonSingle, generateJsonTotal, generateRankingList, generateLastUpdatedTime } from "./util.js"
 import fs from 'fs'
 
 
 console.log("now running command: npm/pnpm run " + process.env.npm_lifecycle_event)
 if ("dev" === process.env.npm_lifecycle_event || "generate-list" === process.env.npm_lifecycle_event) {
-    const filePath = 'data/黑猴九禁速通榜(新).xlsx'
-    const stats = fs.statSync(filePath)
-    const lastUpdatedTime = stats.mtime.toLocaleString('zh-CN', { timeZone: 'Asia/Shanghai' })
+    generateLastUpdatedTime("data/黑猴九禁速通榜(新).xlsx", "data/last-updated-time")
 
-    fs.writeFileSync('data/last-updated-time', `${lastUpdatedTime}`, 'utf-8')
+    generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1, "data/new-list-single.json")
 
-    fs.writeFileSync("data/new-list-single.json", JSON.stringify(generateJsonSingle("data/黑猴九禁速通榜(新).xlsx", 1), null, 4), "utf-8")
-
-    fs.writeFileSync("data/new-list-total.json", JSON.stringify(generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2), null, 4), "utf-8")
+    generateJsonTotal("data/黑猴九禁速通榜(新).xlsx", 2, "data/new-list-total.json")
 }
 
 
