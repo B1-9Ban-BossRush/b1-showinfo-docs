@@ -4,7 +4,7 @@ import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { useWaline, useLive2d } from '@davidingplus/vitepress-waline-live2d'
 import { useRoute } from 'vitepress'
-import './style.css'
+import './styles/index.css'
 
 import BackToTopButton from '@davidingplus/vitepress-back-to-top-button'
 import '@davidingplus/vitepress-back-to-top-button/style.css'
@@ -16,6 +16,7 @@ import VPSwiper from '@davidingplus/vitepress-swiper'
 import '@davidingplus/vitepress-swiper/style.css'
 
 import Bili from './components/Bili.vue'
+import ContentWrapper from './components/ContentWrapper.vue'
 import Layout from './components/Layout.vue'
 
 
@@ -27,6 +28,7 @@ export default {
     ImageViewerP(ctx.app)
     ctx.app.component('VPSwiper', VPSwiper)
     ctx.app.component('Bili', Bili)
+    ctx.app.component('ContentWrapper', ContentWrapper)
   },
   setup() {
     useWaline({
