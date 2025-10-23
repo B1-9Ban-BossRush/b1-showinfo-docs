@@ -15,16 +15,13 @@ import '@davidingplus/vitepress-image-viewer/style.css'
 import VPSwiper from '@davidingplus/vitepress-swiper'
 import '@davidingplus/vitepress-swiper/style.css'
 
-import Bili from './components/Bili.vue';
+import Bili from './components/Bili.vue'
+import Layout from './components/Layout.vue'
 
 
 export default {
   extends: DefaultTheme,
-  Layout: () => {
-    return h(DefaultTheme.Layout, null, {
-      // https://vitepress.dev/guide/extending-default-theme#layout-slots
-    })
-  },
+  Layout: Layout,
   enhanceApp(ctx) {
     BackToTopButton(ctx.app)
     ImageViewerP(ctx.app)
