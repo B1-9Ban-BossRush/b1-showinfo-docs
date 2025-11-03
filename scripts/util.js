@@ -204,8 +204,8 @@ export function generateJsonSingle(filePath, sheetIndex, outputJsonPath) {
     const res = []
     // 遍历每个标题列生成选手数据。
     for (const { title, startCol } of titles) {
-        // 跳过不需要解析的列，如备注或总次数。
-        if ("备注" === title || "总次数" === title) continue
+        // 跳过不需要解析的列，如汇总或备注。
+        if ("汇总" === title || "备注" === title) continue
 
         const arr = []
 
