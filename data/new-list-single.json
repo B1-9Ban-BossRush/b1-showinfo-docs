@@ -827,7 +827,8 @@
             {
                 "选手": "天傲花",
                 "成绩": [
-                    "2'42''53"
+                    "2'42''53",
+                    "https://www.bilibili.com/video/BV1uQ1YBdEqV/?spm_id_from=333.337.search-card.all.click"
                 ],
                 "日期": "2025/11/03"
             },
@@ -912,20 +913,20 @@
                 "日期": "2025/09/20"
             },
             {
+                "选手": "秦个个",
+                "成绩": [
+                    "2'46''53",
+                    "https://www.douyin.com/video/7568130400813272371"
+                ],
+                "日期": "2025/11/02"
+            },
+            {
                 "选手": "白织",
                 "成绩": [
                     "2'47''13",
                     "https://www.bilibili.com/video/BV1MdxnzdECS/?spm_id_from=333.337.search-card.all.click"
                 ],
                 "日期": "2025/10/03"
-            },
-            {
-                "选手": "kun",
-                "成绩": [
-                    "2'47''75",
-                    "https://www.douyin.com/video/7553219093189365044"
-                ],
-                "日期": "2025/09/23"
             }
         ]
     },
